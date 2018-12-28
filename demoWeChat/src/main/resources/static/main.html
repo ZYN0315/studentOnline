@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+    <title>Title</title>
+    <link rel="stylesheet" href="css/asker.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <style type="text/css">
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            background:url("img/anwser.jpg") no-repeat;
+            background-size:cover;
+        }
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            color:#000;
+            opacity: 1;
+            background: rgba(0,0,0,0.2);
+        }
+        .swiper-pagination-bullet-active {
+            color:#fff;
+            background: #007aff;}
+    </style>
+    <script src="js/swiper.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js" ></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js" ></script>
+    <script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js" ></script>
+    <script src="js/asker.js"></script>
+</head>
+<body onload="f()">
+<div class="main ">
+    <input type="button" class="button1" name="button1"  >
+    <input type="button" class="button2" name="button2"  >
+</div>
+<div class="answer hide" >
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-no-swiping" id="slide1">
+                <p class="question" id="question1">
+                </p>
+                <div class="options">
+                    <div class="test1"><input type="radio" name="option1" value="1" class="option" id="op11"><label for="op11" style="display: flex;flex-grow: 1;">A.开朗</label></div>
+                    <div class="test2"><input type="radio" name="option1" value="2" class="option" id="op12"><label for="op12" style="display: flex;flex-grow: 1;">B.内向</label></div>
+                    <div class="test3"><input type="radio" name="option1" value="3" class="option" id="op13"><label for="op13" style="display: flex;flex-grow: 1;">C.闷骚</label></div>
+                    <div class="test4"><input type="radio" name="option1" value="4" class="option" id="op14"><label for="op14" style="display: flex;flex-grow: 1;">D.明骚</label></div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-no-swiping" id="slide2">
+                <p class="question" id="question2">
+                </p>
+                <div class="options">
+                    <div class="test1"><input type="radio" name="option2" value="1" class="option2" id="op21"><label for="op21"style="display: flex;flex-grow: 1;">A.推理小说</label></div>
+                    <div class="test2"><input type="radio" name="option2" value="2" class="option2" id="op22"><label for="op22"style="display: flex;flex-grow: 1;">B.玄幻小说</label></div>
+                    <div class="test3"><input type="radio" name="option2" value="3" class="option2" id="op23"><label for="op23"style="display: flex;flex-grow: 1;">C.文艺小说</label></div>
+                    <div class="test4"><input type="radio" name="option2" value="4" class="option2" id="op24"><label for="op24"style="display: flex;flex-grow: 1;">D.不爱小说/爱看，但以上没有</label></div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-no-swiping" id="slide3">
+                <p class="question" id="question3">
+                </p>
+                <div class="options">
+                    <div class="test1"><input type="radio" name="option3" value="1" class="option3" id="op31"><label for="op31"style="display: flex;flex-grow: 1;">A.绝地求生</label></div>
+                    <div class="test2"><input type="radio" name="option3" value="2" class="option3" id="op32"><label for="op32"style="display: flex;flex-grow: 1;">B.王者荣耀</label></div>
+                    <div class="test3"><input type="radio" name="option3" value="3" class="option3" id="op33"><label for="op33"style="display: flex;flex-grow: 1;">C.欢乐斗地主</label></div>
+                    <div class="test4"><input type="radio" name="option3" value="4" class="option3" id="op34"><label for="op34"style="display: flex;flex-grow: 1;">D.不爱游戏/爱玩，以上没有</label></div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-no-swiping" id="slide4">
+                <p class="question" id="question4">
+                </p>
+                <div class="options">
+                    <div class="test1"><input type="radio" name="option4" value="1" class="option4" id="op41"><label for="op41"style="display: flex;flex-grow: 1;">A.篮球</label></div>
+                    <div class="test2"><input type="radio" name="option4" value="2" class="option4" id="op42"><label for="op42"style="display: flex;flex-grow: 1;">B.乒乓球</label></div>
+                    <div class="test3"><input type="radio" name="option4" value="3" class="option4" id="op43"><label for="op43"style="display: flex;flex-grow: 1;">C.羽毛球</label></div>
+                    <div class="test4"><input type="radio" name="option4" value="4" class="option4" id="op44"><label for="op44"style="display: flex;flex-grow: 1;">D.不爱运动/爱运动，但以上没有</label></div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-no-swiping" id="slide5">
+                <p class="question" id="question5">
+                </p>
+                <div class="options">
+                    <div class="test1"><input type="radio" name="option5" value="1" class="option5" id="op51"><label for="op51"style="display: flex;flex-grow: 1;">A.盛世美颜</label></div>
+                    <div class="test2"><input type="radio" name="option5" value="2" class="option5" id="op52"><label for="op52"style="display: flex;flex-grow: 1;">B.还算好看</label></div>
+                    <div class="test3"><input type="radio" name="option5" value="3" class="option5" id="op53"><label for="op53"style="display: flex;flex-grow: 1;">C.凑合着看</label></div>
+                    <div class="test4"><input type="radio" name="option5" value="4" class="option5" id="op54"><label for="op54"style="display: flex;flex-grow: 1;">D.低到天际</label></div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-no-swiping" id="slide6">
+                <p class="question" id="question6">
+                </p>
+                <div class="options">
+                    <div class="test1"><input type="radio" name="option6" value="1" class="option6" id="op61"><label for="op61"style="display: flex;flex-grow: 1;">A.甜美</label></div>
+                    <div class="test2"><input type="radio" name="option6" value="2" class="option6" id="op62"><label for="op62"style="display: flex;flex-grow: 1;">B.浑厚</label></div>
+                    <div class="test3"><input type="radio" name="option6" value="3" class="option6" id="op63"><label for="op63"style="display: flex;flex-grow: 1;">C.柔和</label></div>
+                    <div class="test4"><input type="radio" name="option6" value="4" class="option6" id="op64"><label for="op64"style="display: flex;flex-grow: 1;">D.粗犷</label></div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-no-swiping" id="slide7">
+                <p class="question" id="question7">
+                </p>
+                <div class="options">
+                    <div class="test1"><input type="radio" name="option7" value="1" class="option7" id="op71"><label for="op71"style="display: flex;flex-grow: 1;">A.颜值</label></div>
+                    <div class="test2"><input type="radio" name="option7" value="2" class="option7" id="op72"><label for="op72"style="display: flex;flex-grow: 1;">B.智商</label></div>
+                    <div class="test3"><input type="radio" name="option7" value="3" class="option7" id="op73"><label for="op73"style="display: flex;flex-grow: 1;">C.性格</label></div>
+                    <div class="test4"><input type="radio" name="option7" value="4" class="option7" id="op74"><label for="op74"style="display: flex;flex-grow: 1;">D.没有突出之处</label></div>
+                </div>
+                <div ><input type="button" value="提交" class="sub" style="background: white"></div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div></div>
+
+<div class="action hide">
+    <select class="level">
+        <option value="0" style="font-size: x-small">请选择最低匹配度</option>
+        <option value="3"style="font-size: x-small">3题相同</option>
+        <option value="4"style="font-size: x-small">4题相同</option>
+        <option value="5"style="font-size: x-small">5题相同</option>
+        <option value="6"style="font-size: x-small">6题相同</option>
+        <option value="7"style="font-size: x-small">7题相同</option>
+    </select>
+    <div class="actions">
+        <div><p>CHAPTER ONE:</p></div>
+        <div class="two">
+            <input type="checkbox" name="action" style="float: left" id="action11" value="喊ta起床"><label for="action11"><div class="actionL">喊ta起床</div></label>
+            <input type="checkbox" name="action" id="action12" value="给ta挑个钥匙扣"><label for="action12"><div class="actionR">给ta挑个钥匙扣</div></label>
+        </div>
+        <div class="two">
+            <input type="checkbox" name="action" style="float: left" id="action21" value="对ta说晚安"><label for="action21"><div class="actionL">对ta说晚安</div></label>
+            <input type="checkbox" name="action"  id="action22" value="帮ta捶背"><label for="action22"><div class="actionR">帮ta捶背</div></label>
+        </div>
+        <div class="two">
+            <input type="checkbox" name="action" style="float: left" id="action31" value="请ta帮画头像"><label for="action31"><div class="actionL">请ta帮画头像</div></label>
+            <input type="checkbox" name="action"  id="action32" value="帮ta取快递"><label for="action32"><div class="actionR">帮ta取快递</div></label>
+        </div>
+        <div>  <p>CHAPTER TWO:</p></div>
+
+        <div class="two">
+            <input type="checkbox" name="action" style="float: left" id="action41" value="唱首歌给ta听"><label for="action41"><div class="actionL">唱首歌给ta听</div></label>
+            <input type="checkbox" name="action"  id="action42" value="给ta介绍对象"><label for="action42"><div class="actionR">给ta介绍对象</div></label>
+        </div>
+        <div class="two">
+            <input type="checkbox" name="action" style="float: left" id="action51" value="和ta合影"><label for="action51"><div class="actionL">和ta合影</div></label>
+            <input type="checkbox" name="action"  id="action52" value="请ta喝奶茶"><label for="action52"><div class="actionR">请ta喝奶茶</div></label>
+        </div>
+        <div class="two">
+            <input type="checkbox" name="action" style="float: left" id="action61" value="让ta请你喝奶茶"><label for="action61"><div class="actionL">让ta请你喝奶茶</div></label>
+            <input type="checkbox" name="action"  id="action62" value="送ta皮肤"><label for="action62"><div class="actionR">送ta皮肤</div></label>
+        </div>
+        <div class="two">
+            <input type="checkbox" name="action" style="float: left" id="action71" value="和ta吃鸡"><label for="action71"><div class="actionL">和ta吃鸡</div></label>
+        </div>
+        <div><p>CHAPTER THREE:</p></div>
+        <div class="two">
+            <input type="checkbox" name="action" style="float: left" id="action81" value="设置ta一天特别关心"><label for="action81"><div class="actionL">设置ta一天特别关心</div></label>
+            <input type="checkbox" name="action"  id="action82" value="和ta看场电影"><label for="action82"><div class="actionR">和ta看场电影</div></label>
+        </div>
+        <div class="two">
+            <input type="checkbox" name="action" style="float: left" id="action91" value="和ta拍条抖音"><label for="action91"><div class="actionL">和ta拍条抖音</div></label>
+            <input type="checkbox" name="action"  id="action92" value="陪ta自习"><label for="action92"><div class="actionR">陪ta自习</div></label>
+        </div>
+        <div class="two">
+            <input type="checkbox" name="action" style="float: left" id="action101" value="给ta深拥"><label for="action101"><div class="actionL">给ta深拥</div></label>
+            <input type="checkbox" name="action"  id="action102" value="让ta给你写封信"><label for="action102"><div class="actionR">让ta给你写封信</div></label>
+        </div>
+        <div class="two">
+            <input type="checkbox" name="action" style="float: left" id="action111" value="请ta吃饭"><label for="action111"><div class="actionL">请ta吃饭</div></label>
+        </div>
+        <div><p>CHAPTER FOUR:</p></div>
+        <div class="two">
+            <input type="checkbox" name="action" style="float: left" id="action121" value="和ta换一天情头"><label for="action121"><div class="actionL">和ta换一天情头</div></label>
+            <input type="checkbox" name="action"  id="action122" value="请ta喝一顿酒"><label for="action122"><div class="actionR">请ta喝一顿酒</div></label>
+        </div>
+        <div class="two">
+            <input type="checkbox" name="action" style="float: left" id="action131" value="和ta互曝一段情感经历"><label for="action131"><div class="actionL">和ta互曝一段情感经历</div></label>
+            <input type="checkbox" name="action"  id="action132" value="陪ta健身"><label for="action132"><div class="actionR">陪ta健身</div></label>
+        </div>
+        <div class="two">
+            <input type="checkbox" name="action" style="float: left" id="action141" value="让ta清空你双十一购物车"><label for="action141"><div class="actionL">让ta清空你双十一购物车</div></label>
+            <input type="checkbox" name="action"  id="action142" value="做ta一天男朋友"><label for="action142"><div class="actionR">做ta一天男朋友</div></label>
+        </div>
+        <div class="two">
+            <input type="checkbox" name="action" style="float: left" id="action151" value="做ta一天女朋友"><label for="action151"><div class="actionL">做ta一天女朋友</div></label>
+        </div>
+    </div>
+    <input type="button" class="subAction" value="提交" >
+</div>
+<div class="share hide">
+    <div class="showactions">
+        <div><p style="font-family: 华文新魏;font-size: xx-large">需要ta做的事情：</p></div>
+        <div class="showaction"> <p id="showaction1"></p></div>
+        <div class="showaction"> <p id="showaction2"></p></div>
+        <div class="showaction"> <p id="showaction3"></p></div>
+
+    </div>
+    <input type="button" class="sharebutton" >
+</div>
+<div class="resultsBy hide">
+    <div class="back">
+        <p class="needtoDo"></p>
+    </div>
+    <div class="ansers">
+        <p id="p" style="font-family: 华文新魏;font-size: xx-large;text-align: center"></p>
+    </div>
+</div>
+</body>
+</html>
